@@ -100,12 +100,12 @@ class ProfileInfo extends StatelessWidget {
     return const Column(
       children: [
         Text(
-          'Jane Doe',
+          'Jose Canche',
           style: kNameTextStyle,
         ),
         SizedBox(height: kSpacingS),
         Text(
-          '@janedoe',
+          '@acanche044@gmail.com',
           style: kHandleTextStyle,
         ),
       ],
