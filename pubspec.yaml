@@ -1,0 +1,85 @@
+name: pato
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  # Versión del SDK ajustada. Revisa que sea compatible con tu Flutter.
+  # El error original sugería ^3.9.2, pero la versión estable es más alta.
+  sdk: '>=3.0.0 <4.0.0' 
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  equatable: ^2.0.5
+  flutter_bloc: ^9.1.1
+  bloc: ^9.0.1
+  get_it: ^7.7.0
+  
+  # Dependencias añadidas (basado en el contexto del error original):
+  dartz: ^0.10.1 # Para manejo de errores funcionales (Either)
+  shared_preferences: ^2.2.3 # Para persistencia local (si necesitas guardar datos)
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+  flutter_native_splash: ^2.4.1
+
+# --------------------------------------------------------------------
+# CONFIGURACIÓN DEL ÍCONO (flutter_launcher_icons)
+# --------------------------------------------------------------------
+flutter_launcher_icons:
+  # OJO: La indentación aquí es crucial. Debe estar al mismo nivel que `name:`.
+  android: true
+  ios: false
+  image_path: "assets/images/beisbol.png" 
+  
+  # Iconos Adaptativos para Android:
+  adaptive_icon_background: "#F8FFFE"
+  adaptive_icon_foreground: "assets/images/beisbol.png"
+
+  # La configuración `min_sdk_android` va dentro de `flutter_launcher_icons`
+  # pero solo si es necesario sobrescribir el valor. 
+  # Generalmente, no es necesario aquí.
+
+# --------------------------------------------------------------------
+# CONFIGURACIÓN DEL SPLASH SCREEN (flutter_native_splash)
+# --------------------------------------------------------------------
+flutter_native_splash:
+  # OJO: La indentación aquí es crucial.
+  color: "#F8FFFE"
+  image: "assets/images/beisbol.png"
+  
+  # Plataformas
+  android: true
+  ios: false
+  web: false
+  
+  # Configuración para Dark Mode (opcional)
+  color_dark: "#2D5016"
+  image_dark: "assets/images/beisbol.png"
+  
+  # Configuración para Android 12+
+  android_12:
+    image: "assets/images/beisbol.png"
+    color: "#F8FFFE"
+    icon_background_color: "#F8FFFE"
+  
+  # Deshabilitar fullscreen
+  fullscreen: false
+
+# --------------------------------------------------------------------
+# CONFIGURACIÓN DE FLUTTER
+# --------------------------------------------------------------------
+flutter:
+  # OJO: `uses-material-design` y `assets:` deben estar indentados debajo de `flutter:`
+  uses-material-design: true
+  
+  assets:
+    # Debes especificar la carpeta, no solo el nombre con un guion al final.
+    - assets/images/
