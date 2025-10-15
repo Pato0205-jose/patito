@@ -19,8 +19,13 @@ class ProfileScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(
-        child: ProfileCard(),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(kSpacingM),
+            child: ProfileCard(),
+          ),
+        ),
       ),
     );
   }
